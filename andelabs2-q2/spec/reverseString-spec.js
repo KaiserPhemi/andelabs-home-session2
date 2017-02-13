@@ -1,3 +1,7 @@
+'use strict';
+
+var reverseString = require("../app/reverseString").reverseString;
+
 describe("Produce the reverse order of a word: ", function() {
   describe("Case for en empty string", function() {
 
@@ -37,6 +41,17 @@ describe("Produce the reverse order of a word: ", function() {
       expect(reverseString('misc')).toEqual('csim');
     });
 
+  });
+
+  describe("Case for other inputs other than string type", function(){
+    
+    it("Should return `Input must be a string` for numeric input 5", function(){
+      expect(reverseString(5)).toEqual("Input must be a string");
+    });
+
+    it("Should return `Input must be a string` for array input ['femi', 'akinwa']", function(){
+      expect(reverseString(['femi', 'akinwa'])).toEqual("Input must be a string");
+    });
   });
 
 });
