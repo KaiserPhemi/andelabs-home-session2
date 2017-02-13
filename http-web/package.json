@@ -1,0 +1,22 @@
+{
+  "name": "http-web",
+  "version": "1.0.0",
+  "description": "A simple CLI application",
+  "main": "app/web.js",
+  "scripts": {
+    "test": "jasmine-node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KaiserPhemi/andelabs-home-session2.git"
+  },
+  "keywords": [
+    "http-web"
+  ],
+  "author": "Oluwafemi Akinwa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KaiserPhemi/andelabs-home-session2/issues"
+  },
+  "homepage": "https://github.com/KaiserPhemi/andelabs-home-session2#readme"
+}
