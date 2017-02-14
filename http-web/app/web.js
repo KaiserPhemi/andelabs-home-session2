@@ -15,22 +15,32 @@ var	twitter = new Twitter({
 	express	= require('express'),
 	util   	= require('util'),
 	app		= express(),
+	params	= {screen_name: 'Medium'},
 	port	= 9999;
 
-app.listen(port, function(){
 
-		console.log("We are live on port "+ port);
-	});
+twitter.get('statuses/user_timeline', params, function(error, tweets, response){
+	if(!error){
+		console.log(tweets);
+	}
+});
 
 
 	
 /*Gets stream of tweets that contains `medium`*/
-twitter.stream('filter', {track: "medium"}, function(stream){
+twitter.stream('statuses/filter', {track: "medium"}, function(stream){
 
 	stream.on('data', function(data){
 
-		console.log(util.inspect(data));
+		console.log(data.text);
 		stream.destroy();
-		process.exit(0);
+		
 	});
+	stream.on('error', function(error){
+		
+		console.log(error);
+		stream.destroy();
+	});
+
+	
 });
