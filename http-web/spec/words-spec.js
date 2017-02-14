@@ -3,10 +3,6 @@
 var words = require("../app/words").words;
 
 describe("words()", function() {
-  it("Returns `No string input was supplied` for empty string", function() {
-    expect(words("")).toEqual("No string input was supplied");
-  });
-
   it("counts one word", function() {
     var expectedCounts = { word: 1 };
     expect(words("word")).toEqual(expectedCounts);
