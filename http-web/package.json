@@ -15,8 +15,12 @@
   ],
   "author": "Oluwafemi Akinwa",
   "license": "MIT",
+  "bin": "webnode",
   "bugs": {
     "url": "https://github.com/KaiserPhemi/andelabs-home-session2/issues"
   },
-  "homepage": "https://github.com/KaiserPhemi/andelabs-home-session2#readme"
+  "homepage": "https://github.com/KaiserPhemi/andelabs-home-session2#readme",
+  "dependencies": {
+    "commander": "^2.9.0"
+  }
 }
