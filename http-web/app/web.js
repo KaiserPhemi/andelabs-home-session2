@@ -13,8 +13,6 @@ var	twitter = new Twitter({
 	access_token_secret: 'JctSzBBR71ODjLHXui9xqHstMMnxj5yrIdfl1H4m10ywZ'
 	}),
 	express	= require('express'),
-	util   	= require('util'),
-	app		= express(),
 	params	= {screen_name: 'Medium'},
 	port	= 9999;
 
