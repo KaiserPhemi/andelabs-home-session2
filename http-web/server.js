@@ -1,9 +1,14 @@
 'use strict';
 
-	var express 		= require('express');
-	var app			= express();
+	var express		= require('express'),
+		mongoose	= require('mongoose'),
+		bodyParser	= require('body-parser'),
+		twitter		= require('twitter'),
+		app			= express(),
+		port		= 9999;
 
-	var port 			= 9999;
+	app.use(bodyParser.urlencoded({extended : true}));
+	app.use(bodyParser.json());
 
 	app.get('/', function(request, response){
 
