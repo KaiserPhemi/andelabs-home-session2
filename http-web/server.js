@@ -1,21 +1,24 @@
 'use strict';
 
-	var express		= require('express'),
-		mongoose	= require('mongoose'),
-		bodyParser	= require('body-parser'),
-		twitter		= require('twitter'),
-		app			= express(),
-		port		= 9999;
+/*Dependencies*/
+var express		= require('express'),
+	mongoose	= require('mongoose'),
+	bodyParser	= require('body-parser'),
+	Twitter		= require('twitter'),
+	port		= 9999;
 
-	app.use(bodyParser.urlencoded({extended : true}));
-	app.use(bodyParser.json());
+/*Express*/
+var app	= express();
+app.use(bodyParser.urlencoded({extended : true}));
+app.use(bodyParser.json());
 
-	app.get('/', function(request, response){
+app.get('/', function(request, response){
 
-		response.send("Look mum, it's working");
+	response.send("Look mum, it's working");
 
-	});
+});
 
-	app.listen(port, function(){
-		console.log("We are live on port "+ port);
-	});
+/*Starts server*/
+app.listen(port, function(){
+	console.log("We are live on port "+ port);
+});
