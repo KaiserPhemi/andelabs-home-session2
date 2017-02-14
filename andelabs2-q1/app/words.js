@@ -12,14 +12,17 @@
 
 			function countString(stringArg){
 				
-				var stringDataSet = stringArg.split(" ") || stringArg.split("\t");
-				var resultingObject = {};
-				var value;
+				/*Converts multiple occurences of whitespace character into a
+				single spaceand transform input to an array */
+				var stringDataSet = stringArg.replace(/\s+/g, ' ').split(' '),
+
+					resultingObject = {},
+					value;
 
 				for (var counter = 0; counter < stringDataSet.length; counter++){
-					value = stringDataSet[counter];
-										
-					if (resultingObject[value] == undefined  || resultingObject[value] == null) {
+					value = (stringDataSet[counter]);
+
+					if (!(resultingObject.hasOwnProperty(value))){
 					
 						resultingObject[value] = 1;
 					}
